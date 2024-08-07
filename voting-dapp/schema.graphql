@@ -1,0 +1,7 @@
+type VoterAdded @entity(immutable: true) {
+  id: Bytes!
+  voter: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}

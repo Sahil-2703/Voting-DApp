@@ -1,0 +1,26 @@
+specVersion: 1.0.0
+indexerHints:
+  prune: auto
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: Voting
+    network: polygon-amoy
+    source:
+      address: "0xdA20b4a8e49379ef02795a1ccDF5953b8aeed42c"
+      abi: Voting
+      startBlock: 10444480
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - VoterAdded
+      abis:
+        - name: Voting
+          file: ./abis/Voting.json
+      eventHandlers:
+        - event: VoterAdded(address)
+          handler: handleVoterAdded
+      file: ./src/voting.ts
