@@ -8,9 +8,9 @@ dataSources:
     name: Voting
     network: polygon-amoy
     source:
-      address: "0xdA20b4a8e49379ef02795a1ccDF5953b8aeed42c"
+      address: "0x32417c56E5EEe7Ff07910C785EdCAFDd5039DDf2"
       abi: Voting
-      startBlock: 10444480
+      startBlock: 10462174
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
